@@ -1,12 +1,13 @@
-import Person from ("./Person.js")
+const Person = require("./Person.js")
 
-class Bag extends Person{
+class Bag {
+  static id = 1;  
   #owner
-  constructor(weight, id, name, destination, bags) {
-    super(name, destination, bags)
+  constructor(weight, owner) {
     this.weight = weight;
-    this.id = id;
-    this.#owner = null;
+    this.id = Bag.id;
+    Bag.id++;
+    this.#owner = owner;
   }
   getOwner(){
       return this.#owner

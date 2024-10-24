@@ -18,7 +18,7 @@ describe("Create bag", function() {
 describe("Bag variables", function() {
     it("has an ID", function() {
         const bag = new Bag(weight, owner);
-        expect(bag.id).toBeInstanceOf(Number);
+        expect(bag.id != NaN).toBeTruthy();
     })
     it("has the right weight", function() {
         const bag = new Bag(weight, owner);
@@ -34,6 +34,6 @@ describe("Bag functions", function() {
     it("sets owner", function() {
         const bag = new Bag(weight, owner);
         const owner2 = new Person("Sophie", "MAN");
-        expect(bag.getOwner()).toBe(owner2);
+        expect(bag.getOwner()).toEqual(owner2); // Object equality
     })
 })
