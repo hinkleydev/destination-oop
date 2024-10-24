@@ -32,8 +32,8 @@ describe("Bag functions", function() {
         expect(bag.getOwner()).toEqual(owner); // Object equality
     })
     it("sets owner", function() {
-        const bag = new Bag(weight, owner);
         const owner2 = new Person("Sophie", "MAN");
+        const bag = new Bag(weight, owner2);
         expect(bag.getOwner()).toEqual(owner2); // Object equality
     })
 })

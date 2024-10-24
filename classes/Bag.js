@@ -15,7 +15,6 @@ class Bag {
   assignOwner(person){
       if(person instanceof Person){
           this.#owner = person
-          person.addBag(this)
       }else{
           throw new Error("owner must ba a valid Person instance")
       }
